@@ -1,5 +1,10 @@
 # Landlord for Laravel & Lumen 5.2+
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/stefanbauer/landlord-extended.svg?style=flat-square)](https://packagist.org/packages/stefanbauer/landlord-extended)
+[![Build Status](https://img.shields.io/travis/stefanbauer/landlord-extended/master.svg?style=flat-square)](https://travis-ci.org/stefanbauer/landlord-extended)
+[![Total Downloads](https://img.shields.io/packagist/dt/stefanbauer/landlord-extended.svg?style=flat-square)](https://packagist.org/packages/stefanbauer/landlord-extended)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+
 This package based on [HipsterJazzbo/Landlord](https://github.com/HipsterJazzbo/Landlord), a single database multi-tenancy package for Laravel & Lumen 5.2+. Still the same, but maintaining the depencies. 
 
 ## Installation
