@@ -1,6 +1,6 @@
 <?php
 
-namespace HipsterJazzbo\Landlord\Exceptions;
+namespace StefanBauer\Landlord\Exceptions;
 
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 

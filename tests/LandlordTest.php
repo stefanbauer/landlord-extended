@@ -1,8 +1,8 @@
 <?php
 
-use HipsterJazzbo\Landlord\BelongsToTenants;
-use HipsterJazzbo\Landlord\Facades\Landlord;
-use HipsterJazzbo\Landlord\TenantManager;
+use StefanBauer\Landlord\BelongsToTenants;
+use StefanBauer\Landlord\Facades\Landlord;
+use StefanBauer\Landlord\TenantManager;
 use Illuminate\Database\Eloquent\Model;
 use PHPUnit\Framework\TestCase;
 

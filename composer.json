@@ -1,5 +1,5 @@
 {
-    "name": "hipsterjazzbo/landlord",
+    "name": "stefanbauer/landlord-extended",
     "description": "A simple, single database multi-tenancy solution for Laravel 5.2+",
     "license": "MIT",
     "keywords": [
@@ -10,31 +10,35 @@
     ],
     "authors": [
         {
+            "name": "Stefan Bauer",
+            "email": "mail@stefanbauer.me"
+        },
+        {
             "name": "Caleb Fidecaro",
             "email": "calebfidecaro@gmail.com"
         }
     ],
     "require": {
         "php": ">=5.6.0",
-        "illuminate/support": "5.2.*|5.3.*|5.4.*|5.5.*|5.6.*"
+        "illuminate/support": "5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*"
     },
     "require-dev": {
-        "mockery/mockery": "~0.9|~1.0",
-        "phpunit/phpunit": "5.5.*|6.0.*|7.0.*",
-        "laravel/framework": "5.2.*|5.3.*|5.4.*|5.5.*|5.6.*"
+        "mockery/mockery": "~0.9|~1.0|~1.1|~1.2",
+        "phpunit/phpunit": "5.5.*|6.0.*|7.0.*|8.0.*",
+        "laravel/framework": "5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*"
     },
     "autoload": {
         "psr-4": {
-            "HipsterJazzbo\\Landlord\\": "src/"
+            "StefanBauer\\Landlord\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "HipsterJazzbo\\Landlord\\LandlordServiceProvider"
+                "StefanBauer\\Landlord\\LandlordServiceProvider"
             ],
             "aliases": {
-                "Landlord": "HipsterJazzbo\\Landlord\\Facades\\Landlord"
+                "Landlord": "StefanBauer\\Landlord\\Facades\\Landlord"
             }
         }
     }

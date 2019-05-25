@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [v2.0.7] - 2019-05-25
+### Added
+- Support Laravel 5.8
+
 ## [v2.0.6] - 2016-11-30
 ### Changed
 - No longer allow `NULL` as a tenant id
@@ -50,12 +54,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ```php
 //Before
-public function __construct(\HipsterJazzbo\Landlord\Landlord $landlord) {
+public function __construct(\StefanBauer\Landlord\Landlord $landlord) {
     $this->landlord = $landlord;
 }
 
 // After
-public function __construct(\HipsterJazzbo\Landlord\TenantManager $landlord) {
+public function __construct(\StefanBauer\Landlord\TenantManager $landlord) {
     $this->landlord = $landlord;
 }
 ```

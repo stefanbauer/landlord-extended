@@ -1,30 +1,45 @@
 # Landlord for Laravel & Lumen 5.2+
 
-![Landlord for Laravel & Lumen 5.2+](readme-header.jpg)
-
-![StyleCI Status](https://styleci.io/repos/49851417/shield?branch=v2.0-wip)  
-![Build Status](https://travis-ci.org/HipsterJazzbo/Landlord.svg?branch=v2.0-wip)
-
-A single database multi-tenancy package for Laravel & Lumen 5.2+.
-
-> **Upgrading from Landlord v1?** Make sure to read the [change log](CHANGELOG.md) to see what needs updating.
+This package based on [HipsterJazzbo/Landlord](https://github.com/HipsterJazzbo/Landlord), a single database multi-tenancy package for Laravel & Lumen 5.2+. Still the same, but maintaining the depencies. 
 
 ## Installation
 
-To get started, require this package:
+While this package is not published at packagist, you have to add the repository manually in your `composer.json`.
 
-```bash
-composer require hipsterjazzbo/landlord
+To do so, add this repo.
+
+```
+{
+    ...
+
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/stefanbauer/landlord-extended.git"
+        }
+    ]
+}
 ```
 
-### Laravel
+To get started, require it by:
 
+```bash
+composer require stefanbauer/landlord-extended
+```
+
+## Laravel
+
+### Version 5.5+
+
+Laravel >= 5.5 uses Package Auto-Discovery, so it doesn't require you to manually add the ServiceProvider. If you still have to, here's how to:
+
+### Version 5.4 and below
 Add the ServiceProvider in `config/app.php`:
 
 ```php
     'providers' => [
         ...
-        HipsterJazzbo\Landlord\LandlordServiceProvider::class,
+        StefanBauer\Landlord\LandlordServiceProvider::class,
     ],
 ```
 
@@ -33,14 +48,14 @@ Register the Facade if you’d like:
 ```php
     'aliases' => [
         ...
-        'Landlord'   => HipsterJazzbo\Landlord\Facades\Landlord::class,
+        'Landlord'   => StefanBauer\Landlord\Facades\Landlord::class,
     ],
 ```
 
 You could also publish the config file:
 
 ```bash
-php artisan vendor:publish --provider="HipsterJazzbo\Landlord\LandlordServiceProvider"
+php artisan vendor:publish --provider="StefanBauer\Landlord\LandlordServiceProvider"
 ```
 
 and set your `default_tenant_columns` setting, if you have an app-wide default. LandLord will use this setting to scope models that don’t have a `$tenantColumns` property set.
@@ -50,7 +65,7 @@ and set your `default_tenant_columns` setting, if you have an app-wide default. 
 You'll need to set the service provider in your `bootstrap/app.php`:
 
 ```php
-$app->register(HipsterJazzbo\Landlord\LandlordServiceProvider::class);
+$app->register(StefanBauer\Landlord\LandlordServiceProvider::class);
 ```
 
 And make sure you've un-commented `$app->withEloquent()`.
@@ -119,7 +134,7 @@ To set up a model to be scoped automatically, simply use the `BelongsToTenants` 
 ```php
 
 use Illuminate\Database\Eloquent\Model;
-use HipsterJazzbo\Landlord\BelongsToTenants;
+use StefanBauer\Landlord\BelongsToTenants;
 
 class ExampleModel extends Model
 {
@@ -132,7 +147,7 @@ If you’d like to override the tenants that apply to a particular model, you ca
 ```php
 
 use Illuminate\Database\Eloquent\Model;
-use HipsterJazzbo\Landlord\BelongsToTenants;
+use StefanBauer\Landlord\BelongsToTenants;
 
 class ExampleModel extends Model
 {
@@ -180,7 +195,6 @@ Under the hood, Landlord uses Laravel's [anonymous global scopes](https://larave
 // Will not scope by 'tenant_id', but will continue to scope by any other tenants that have been set
 ExampleModel::withoutGlobalScope('tenant_id')->get();
 ```
-
 
 ## Contributing
 
