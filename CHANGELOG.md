@@ -4,9 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [v2.0.7] - 2019-05-25
+## [v2.0.9] - 2019-05-25
 ### Added
-- Support Laravel 5.8
+- Support Laravel 5.6, 5.7 and 5.8
+
+## [v2.0.8] - 2017-09-18
+### Added
+- Support Laravel 5.5
 
 ## [v2.0.6] - 2016-11-30
 ### Changed
