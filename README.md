@@ -4,24 +4,7 @@ This package based on [HipsterJazzbo/Landlord](https://github.com/HipsterJazzbo/
 
 ## Installation
 
-While this package is not published at packagist, you have to add the repository manually in your `composer.json`.
-
-To do so, add this repo.
-
-```
-{
-    ...
-
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/stefanbauer/landlord-extended.git"
-        }
-    ]
-}
-```
-
-To get started, require it by:
+To get started, require the package by:
 
 ```bash
 composer require stefanbauer/landlord-extended
