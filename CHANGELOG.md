@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## [v2.0.9] - 2019-05-25
 ### Added
 - Support Laravel 5.6, 5.7 and 5.8
+- Update Travis configuration
 
 ## [v2.0.8] - 2017-09-18
 ### Added
